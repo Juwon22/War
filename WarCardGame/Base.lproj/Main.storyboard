@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VFs-3t-fjw" userLabel="playerCard">
+                                <rect key="frame" x="20" y="294" width="142" height="255"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="YGK-cK-PJe"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5kf-aX-2b5" userLabel="cpuCard">
+                                <rect key="frame" x="252" y="294" width="142" height="255"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="5y9-aN-cxr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iik-4O-4iw" userLabel="playerTitle">
+                                <rect key="frame" x="41" y="695" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spn-1C-JV5" userLabel="cpuTitle">
+                                <rect key="frame" x="293.5" y="695" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyc-Jh-X8p" userLabel="playerScoreLabel">
+                                <rect key="frame" x="52" y="736" width="30.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iQ-Y4-xdJ" userLabel="cpuScoreLabel">
+                                <rect key="frame" x="297.5" y="736" width="30.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDB-Ac-ZOP" userLabel="dealButton">
+                                <rect key="frame" x="174" y="613" width="66" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="DEAL">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="dealButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yMp-5J-QUu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fDB-Ac-ZOP" secondAttribute="bottom" constant="207" id="0xe-nR-Be5"/>
+                            <constraint firstItem="iik-4O-4iw" firstAttribute="top" secondItem="fDB-Ac-ZOP" secondAttribute="bottom" constant="40" id="1hF-H5-ITD"/>
+                            <constraint firstItem="7iQ-Y4-xdJ" firstAttribute="centerX" secondItem="Spn-1C-JV5" secondAttribute="centerX" id="4Zz-QD-Y79"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7iQ-Y4-xdJ" secondAttribute="trailing" constant="86" id="7ji-fZ-tAT"/>
+                            <constraint firstItem="5kf-aX-2b5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="BbS-gp-Tg0"/>
+                            <constraint firstItem="fDB-Ac-ZOP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N55-gV-Ma8"/>
+                            <constraint firstItem="Spn-1C-JV5" firstAttribute="top" secondItem="fDB-Ac-ZOP" secondAttribute="bottom" constant="40" id="NEi-pC-LIA"/>
+                            <constraint firstItem="Dyc-Jh-X8p" firstAttribute="top" secondItem="iik-4O-4iw" secondAttribute="bottom" constant="20" id="Pxw-aB-1N2"/>
+                            <constraint firstItem="VFs-3t-fjw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="QaE-WK-7zb"/>
+                            <constraint firstItem="iik-4O-4iw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="TSI-Vy-tuS"/>
+                            <constraint firstItem="Spn-1C-JV5" firstAttribute="top" secondItem="5kf-aX-2b5" secondAttribute="bottom" constant="146" id="XQI-UM-WSn"/>
+                            <constraint firstItem="Dyc-Jh-X8p" firstAttribute="centerX" secondItem="iik-4O-4iw" secondAttribute="centerX" id="btZ-e4-8YQ"/>
+                            <constraint firstItem="7iQ-Y4-xdJ" firstAttribute="top" secondItem="Spn-1C-JV5" secondAttribute="bottom" constant="20" id="fN9-Mn-zr6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VFs-3t-fjw" secondAttribute="trailing" constant="252" id="h76-Ud-HhK"/>
+                            <constraint firstItem="iik-4O-4iw" firstAttribute="top" secondItem="VFs-3t-fjw" secondAttribute="bottom" constant="146" id="kQS-PS-bDf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Spn-1C-JV5" secondAttribute="trailing" constant="82" id="mZe-j4-qH1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5kf-aX-2b5" secondAttribute="trailing" constant="20" id="nua-yR-2wH"/>
+                            <constraint firstItem="VFs-3t-fjw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qjr-Vm-xdt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cpuCard" destination="5kf-aX-2b5" id="n5T-nG-Lbl"/>
+                        <outlet property="cpuScoreLabel" destination="7iQ-Y4-xdJ" id="tio-Ff-6fc"/>
+                        <outlet property="dealButton" destination="fDB-Ac-ZOP" id="ZMW-7P-c1i"/>
+                        <outlet property="playerCard" destination="VFs-3t-fjw" id="A93-dr-aSh"/>
+                        <outlet property="playerScoreLabel" destination="Dyc-Jh-X8p" id="LaW-m4-6Ih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
