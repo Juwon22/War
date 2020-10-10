@@ -42,6 +42,7 @@ class ViewController: UIViewController {
     
     
     // MARK: TODO: Modify deck sizes after dealing card
+    // MARK: TODO: Implement actual game rules xD
     // MARK: TODO: Game over logic
     
     func generateRandomNumber(sizeofDeck: Int) -> Int {
